@@ -18,4 +18,4 @@ Access the web server in `wsl2` from another PC on the same network (Wi-Fi/LAN)<
 netsh interface portproxy add v4tov4 listenport=3000 listenaddress=0.0.0.0 connectport=3000 connectaddress=172.x.x.x
 ```
 
-Change the `connectaddress` to your `wsl2`'s IP address, which you can find using `ifconfig` or `ip -s address`.
+Change the `listenport`, `connectport` and `connectaddress` to your `wsl2`'s IP address, which you can find using `ifconfig` or `ip -s address`.
