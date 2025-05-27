@@ -27,4 +27,11 @@ netsh interface portproxy add v4tov4 listenport=3000 listenaddress=0.0.0.0 conne
 
 Change the `listenport`, `connectport` and `connectaddress` to your `wsl2`'s IP address, which you can find using `ifconfig` or `ip -s address`.
 
-Next, set up the inbound firewall rule for the port in Windows Defender Firewall with Advanced Security.
+Next, restart the wsl by using `wsl --shutdown`.
+
+Last, set up the inbound firewall rule for the port in Windows Defender Firewall with Advanced Security _if neccessary_.
+
+To reset the `portproxy`
+```powershell
+netsh interface portproxy reset
+```
